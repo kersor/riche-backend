@@ -5,10 +5,13 @@ export class CreateProductDto {
     price: number;
     description: string;
     fullDescription: string;
-    skinType?: string;
-    fragrance?: string;
-    age?: number;
-    ph?: string;
-    shelfLife?: object;
-    volume?: string;
+    characteristics: {
+        skinType?: string;
+        fragrance?: string;
+        age?: number;
+        ph?: string;
+        shelfLife?: object;
+        volume?: string;
+    };
+    categoryId: string;
 }

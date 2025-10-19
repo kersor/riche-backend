@@ -13,4 +13,10 @@ export class CategoriesService {
 
         return category;
     }
+
+    async getAllCategories() {
+        const category = await this.prisma.categories.findMany();
+
+        return category;
+    }
 }
