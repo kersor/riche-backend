@@ -69,6 +69,10 @@ export class ProductsService {
             where: {
                 slug: slug,
             },
+            include: {
+                category: true,
+                characteristics: true,
+            },
         });
 
         return product;
